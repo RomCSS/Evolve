@@ -1,0 +1,305 @@
+@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap);
+
+* {
+    font-family: 'Montserrat';
+}
+
+/* General */
+
+body {
+    margin: 0;
+}
+
+/* Tête de page */
+
+header {
+    display: flex;
+    align-items: center;
+    background-color: rgb(7,29,43);
+}
+
+#logo {
+    width: 50px;
+    margin-left: 20px;
+}
+
+.nav-bar {
+    width: 40%;
+    margin-left: 50px;
+}
+
+.nav-bar>ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.page-link {
+    list-style: none;
+}
+
+.page-link>a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.page-link>a:hover {
+    color: cyan;
+}
+
+.page-link>a::after{
+    content: "";
+    background-color: cyan;
+    display: block;
+    width: 100%;
+    height: 1px; 
+    transform: scale(0);
+    transition: transform .2s ease-in-out;
+}
+
+.page-link>a:hover::after{
+    transform: scale(1);
+}
+
+.page-link>ul {
+    list-style-type: none;
+}
+
+.sous-menu {
+    display: none;
+    position: absolute;
+    padding: 0;
+    background-color: rgb(7,29,43);
+}
+
+.sous-menu>li {
+    margin: 5px;
+}
+
+.sous-menu>li>a:hover {
+    color: cyan;
+}
+
+.sous-menu>li>a {
+    list-style: none;
+    text-decoration: none;
+    color: white;
+}
+
+.page-link:hover>.sous-menu {
+    display: flex;
+    flex-direction: column;
+}
+
+/* body of the page */
+
+.parallax {
+    background: url('produits-background-flou.png') repeat fixed 100%;
+    background-size: cover;
+}
+
+.product {
+    display: flex;
+}
+
+.product * {
+    margin: 5%;
+}
+
+.product:nth-child(2n+2) {
+    background-color: rgb(7,29,43);
+}
+
+.product:nth-child(2n+2)>img {
+    margin-left: 50px;
+}
+
+.product:nth-child(2n+1)>img {
+    margin-right: 50px;
+}
+
+.product>img {
+    box-shadow: 1px 1px 12px black;
+    width: 400px;
+    height: 250px;
+    border: 5px solid rgb(7,29,43);
+    -moz-border-radius : 75px;
+    -webkit-border-radius : 75px;
+    border-radius : 75px;
+    box-shadow: 1px 1px 12px black;
+}
+
+.title-para {
+    align-self: center;
+}
+
+.title-para>h2 {
+    color: rgb(15,148,165);
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.title-para:nth-child(2n+2)>h2 {
+    color: rgb(63, 43, 99);
+}
+
+.title-para>p {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.title-para:nth-child(2n+1)>p {
+    color: white;
+}
+
+/* Nos Offres */
+
+.titre-offres {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 70px;
+    color: black;
+    font-weight: bold;
+    font-size: 40px;
+}
+
+.offre-box {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 100px;
+    padding: 0; /* Padding automatique ? */
+}
+
+.offre-li-box {
+    color: white;
+    background-color: rgb(7,29,43);
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 350px;
+    height: 200px;
+    border: none;
+    -moz-border-radius : 75px;
+    -webkit-border-radius : 75px;
+    border-radius : 75px;
+    box-shadow: 8px 8px 12px black;
+}
+
+.offre-li-box>* {
+    margin-top: 50px;
+}
+
+.offre-li-box>h1 {
+    text-align: center;
+}
+
+.button-offre {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  width: 150px;
+}
+
+/* Séparation */
+
+.séparation {
+    height: 200px;
+    background-color: rgb(7,29,43);
+}
+
+/* Avis des clients */
+
+.titre-avis {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 70px;
+    color: black;
+    font-weight: bold;
+    font-size: 40px;
+}
+
+.avis-box {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 100px;
+    padding: 0; /* Padding automatique ? */
+}
+
+.avis-li-box {
+    color: white;
+    background-color: rgb(27, 77, 109);
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 450px;
+    height: 200px;
+    border: none;
+    -moz-border-radius : 75px;
+    -webkit-border-radius : 75px;
+    border-radius : 75px;
+    box-shadow: 8px 8px 12px black;
+}
+
+.para-avis {
+    margin: 30px;
+}
+
+.nom-avis {
+    margin: 0;
+    font-size: 15px;
+    font-style: italic;
+    color: rgb(182, 182, 182);
+}
+
+/* Bas de page */
+
+footer {
+    background-color: rgb(7,29,43);
+    bottom: 0;
+}
+
+footer>ul {
+    color: white;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    padding: 0;
+    padding: 10px 0;
+    margin: 0; /* AUTO MARGIN KOZENFHREBGJ */
+}
+
+footer>ul>ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 30%;
+}
+
+.infos-footer>p {
+    width: 200px;
+}
+
+.reseaux>a>img {
+    width: 50px;
+}
+
+.copyright {
+    color: white;
+    text-align: center;
+    font-size: 15px;
+    margin-bottom: 0;
+    padding: 50px;
+}

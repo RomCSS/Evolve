@@ -1,0 +1,312 @@
+@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap);
+
+* {
+    font-family: 'Montserrat';
+}
+
+/* General */
+
+body {
+    margin: 0;
+}
+
+/* Tête de page */
+
+header {
+    display: flex;
+    align-items: center;
+    background-color: rgb(7,29,43);
+}
+
+#logo {
+    width: 50px;
+    margin-left: 20px;
+}
+
+.nav-bar {
+    width: 40%;
+    margin-left: 50px;
+}
+
+.nav-bar>ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.page-link {
+    list-style: none;
+}
+
+.page-link>a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.page-link>a:hover {
+    color: cyan;
+}
+
+.page-link>a::after{
+    content: "";
+    background-color: cyan;
+    display: block;
+    width: 100%;
+    height: 1px; 
+    transform: scale(0);
+    transition: transform .2s ease-in-out;
+}
+
+.page-link>a:hover::after{
+    transform: scale(1);
+}
+
+.page-link>ul {
+    list-style-type: none;
+}
+
+.sous-menu {
+    display: none;
+    position: absolute;
+    padding: 0;
+    background-color: rgb(7,29,43);
+}
+
+.sous-menu>li {
+    margin: 5px;
+}
+
+.sous-menu>li>a:hover {
+    color: cyan;
+}
+
+.sous-menu>li>a {
+    list-style: none;
+    text-decoration: none;
+    color: white;
+}
+
+.page-link:hover>.sous-menu {
+    display: flex;
+    flex-direction: column;
+}
+
+/*Landing page */
+
+.top-page{
+    background: url('cybersecurite-bakground.jpg');
+    background-size: cover;
+    height: 85vh;
+    padding-top: 80px;
+}
+
+#slogan-box {
+    width: 50%;
+}
+
+#slogan {
+    color: white;
+    font-size: 80px;
+    margin-left: 50px;
+}
+
+/* Presentation */
+
+.pres-page {
+    background-size: cover;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+}
+
+.pres-page>div {
+    display: flex;
+    flex-direction: column;
+    /* text-align: center; */
+}
+
+.presentation {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 70px;
+    color: black;
+    font-weight: bold;
+    font-size: 40px;
+}
+
+.bloc-all-pres {
+    display: flex;
+    flex-direction: row;
+    margin-top: 100px;
+}
+
+.bloc-texte-pres {
+    width: 60%;
+}
+
+.bloc-texte-pres>h3, .bloc-texte-pres>p {
+    margin-left: 50px;
+}
+
+.bloc-image-pres {
+    display: flex;
+    justify-content: center;
+    width: 40%;
+}
+
+.bloc-image-pres>img {
+    width: 350px;
+    height: 350px;
+    border: none;
+    -moz-border-radius : 120px;
+    -webkit-border-radius : 120px;
+    border-radius : 120px;
+    box-shadow: 1px 1px 12px black;
+}
+
+.presentation-text-title {
+    /* width: 50%; */
+    font-size: 35px;
+    color: cornflowerblue;
+}
+
+.presentation-text {
+    width: 80%;
+    height: 40vh;
+    font-size: 30px;
+    line-height: 40px;
+}
+
+/* Les chiffres */
+
+.chiffres-page {
+    background: url('los-angeles-background.jpg');
+    background-size: cover;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+}
+
+.chiffres {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+    color: white;
+    font-weight: bold;
+    font-size: 40px;
+}
+
+.chiffres-box>ul {
+    width: 1200px;
+    margin: 0;
+    margin-top: 90px;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.chiffres-li-box {
+    color: white;
+    background-color: rgb(7,29,43);
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    height: 200px;
+    border: none;
+    -moz-border-radius : 75px;
+    -webkit-border-radius : 75px;
+    border-radius : 75px;
+    box-shadow: 8px 8px 12px black;
+}
+
+.chiffres-li-box>h3, .chiffres-li-box>p {
+    text-align: center;
+}
+
+.chiffres-li-box>h3 {
+    font-size: 25px;
+    margin-top:10%;
+
+}
+
+.chiffres-li-box>p {
+    font-size: 50px;
+    color: cyan;
+    margin: 0;
+}
+
+/* Partners */
+
+.nos-partenaires {
+    color: rgb(7,29,43);
+    font-size: 40px;
+    margin: 0px;
+    text-align: center;
+}
+
+.nos-partenaires {
+    margin-top: 50px;
+}
+
+.partenaire {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    margin: 0;
+    list-style: none;
+    padding: 0;
+}
+
+.partenaire>li>a>img {
+    width: 100px;
+    margin: 50px;
+}
+
+/* Bas de page */
+
+footer {
+    background-color: rgb(7,29,43);
+    /* height: 10vh; */
+    bottom: 0;
+}
+
+footer>ul {
+    color: white;
+    /* text-align: center; */
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    /* align-items: center; */
+    width: 100%;
+    padding: 0;
+    padding: 10px 0;
+}
+
+footer>ul>ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 30%;
+}
+
+.infos-footer>p {
+    width: 200px;
+}
+
+.reseaux>a>img {
+    width: 50px;
+}
+
+.copyright {
+    color: white;
+    text-align: center;
+    font-size: 15px;
+    margin-bottom: 0;
+    padding: 50px;
+}
